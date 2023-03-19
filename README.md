@@ -1,5 +1,3 @@
-# Workflows
-
 ## [do-not-merge](https://github.com/wdhdev/workflows/blob/main/do-not-merge.yml)
 If a pull request is labelled `do not merge`, this workflow will automatically run and fail, so maintainers cannot merge it.
 
