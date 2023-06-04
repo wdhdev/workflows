@@ -5,10 +5,12 @@ on:
         types: [synchronize, opened, reopened, labeled, unlabeled]
 
 jobs:
-    do-not-merge:
-        if: ${{ contains(github.event.*.labels.*.name, 'do not merge') }}
+    check:
+        if: ${{ contains(github.event.*.labels.*.name, "do not merge") }}
+
         name: Check
         runs-on: ubuntu-latest
+
         steps:
             - run: |
                   echo "Pull request is labeled as do not merge."
